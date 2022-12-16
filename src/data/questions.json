@@ -1,0 +1,19 @@
+[
+    {
+        "id":1,
+        "question":"Almanyanın paytaxtı hansı şəhərdir?"
+    },
+    {
+        "id":2,
+        "question":"Aşağıdakı kompüter hissələrindən əməli yaddaş qurğusu deyilən hansıdır?"
+    }, 
+    {
+        "id":3,
+        "question":"Apple şirkətinin qurucusu kimdir?"
+    },
+    {
+        "id":4,
+        "question":"Mayeyə batırılmış cisim onun çıxardığı mayenin çəkisinə bərabər qüvvə ilə mayedən itələnir - bu qanun kimə aiddir?"
+    }
+    
+]

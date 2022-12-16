@@ -1,0 +1,90 @@
+[
+    [
+        {
+            "questionId": 1,
+            "title": "Erfurt",
+            "isCorrectAnswer": false,
+            "variant":"A"
+        },
+        {
+            "questionId": 1,
+            "title": "Bremen",
+            "isCorrectAnswer": false,
+            "variant":"B"
+        }, 
+        {
+            "questionId": 1,
+            "title": "Berlin",
+            "isCorrectAnswer": true,
+            "variant":"C"
+        },
+        {
+            "questionId": 1,
+            "title": "Münhen",
+            "isCorrectAnswer": false,
+            "variant":"D"
+        }
+
+    ],
+    [
+        {
+            "questionId": 2,
+            "title": "RAM",
+            "isCorrectAnswer": true,
+            "variant":"A"
+
+        },
+        {
+            "questionId": 2,
+            "title": "HDD",
+            "isCorrectAnswer": false,
+            "variant":"B"
+
+        }, 
+        {
+            "questionId": 2,
+            "title": "SSD",
+            "isCorrectAnswer": false,
+            "variant":"C"
+
+        },
+        {
+            "questionId": 2,
+            "title": "ROM",
+            "isCorrectAnswer": false,
+            "variant":"D"
+
+        }
+    ],
+    [
+        {
+            "questionId": 3,
+            "title": "Tim Kuk",
+            "isCorrectAnswer": false,
+            "variant":"A"
+
+        },
+        {
+            "questionId": 3,
+            "title": "Steve Wozniak",
+            "isCorrectAnswer": false,
+            "variant":"B"
+
+        }, 
+        {
+            "questionId": 3,
+            "title": "Steve Jobs",
+            "isCorrectAnswer": true,
+            "variant":"C"
+
+        },
+        {
+            "questionId": 3,
+            "title": "Bill Gates",
+            "isCorrectAnswer": false,
+            "variant":"D"
+
+        }
+    ]
+   
+]

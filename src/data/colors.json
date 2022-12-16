@@ -1,0 +1,6 @@
+{
+    "default":"radial-gradient(ellipse at center, #2226a3 7%,#060a6d 100%)",
+    "pending":"radial-gradient(at center center, rgb(234, 163, 56) 2%, rgb(196, 137, 0) 100%)",
+    "correct":"radial-gradient(at center center, rgb(52, 219, 52) 1%, rgb(7, 153, 0) 100%)",
+    "wrong":"radial-gradient(at center center, rgb(255, 50, 54) 2%, rgb(142, 0, 0) 100%)"
+}
