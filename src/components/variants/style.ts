@@ -31,19 +31,38 @@ export const List = styled.li<{
   width: 300px;
   height: 60px;
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
+  border: 1px solid #fff;
   border-radius: 20px;
 
-  &:hover {
-    background: radial-gradient(
-      at center center,
-      rgb(234, 163, 56) 2%,
-      rgb(196, 137, 0) 100%
-    );
+  @media ${device.laptop} {
+    width: 260px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:nth-child(3) {
+      margin-left: 0;
+    }
   }
   @media ${device.tablet} {
-    width: 270px;
+    width: 270px !important;
     height: 60px;
+    &:nth-child(1) {
+      margin-left: 0 !important;
+    }
+    &:nth-child(3) {
+      margin-left: 0 !important;
+    }
+  }
+
+  @media ${device.mobileM} {
+    &:nth-child(1) {
+      margin-left: 70px !important;
+    }
+    &:nth-child(3) {
+      margin-left: 70px !important;
+    }
+    margin-left: 70px;
   }
 `;
 
@@ -57,7 +76,10 @@ export const WrapperList = styled.ul<{ isFifty?: boolean }>`
   @media ${device.tablet} {
     width: 580px;
   }
+  @media ${device.laptop} {
+    width: 580px;
+  }
   @media ${device.mobileL} {
-    max-width: 280px;
+    max-width: 420px;
   }
 `;

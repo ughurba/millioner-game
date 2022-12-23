@@ -4,6 +4,7 @@ import {
   ImplementFlex,
   WrapperHeader,
   WrapperHelp,
+  QuestionAndVariant,
 } from "./style";
 import {
   Auditoria,
@@ -38,10 +39,10 @@ export const Game = () => {
                 <CallAFriend />
                 <Auditoria />
               </WrapperHelp>
-              <Flex FlexColumn="column">
+              <QuestionAndVariant FlexColumn="column">
                 <Question />
                 <Variants />
-              </Flex>
+              </QuestionAndVariant>
             </ImplementFlex>
 
             <Bonus />

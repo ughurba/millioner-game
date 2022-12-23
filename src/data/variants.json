@@ -24,14 +24,14 @@
     ],
     [
         {
-            "title": "RAM",
-            "isCorrectAnswer": true,
+            "title": "HDD",
+            "isCorrectAnswer": false,
             "variant":"A"
 
         },
         {
-            "title": "HDD",
-            "isCorrectAnswer": false,
+            "title": "RAM",
+            "isCorrectAnswer": true,
             "variant":"B"
 
         }, 

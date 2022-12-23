@@ -40,7 +40,17 @@ export const StyledBurger = styled.button<{ open: boolean }>`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+  @media ${device.tablet} {
+    top: 7%;
+  }
+  @media ${"(max-width: 550px)"} {
+    right: -13%;
+  }
   @media ${device.mobileL} {
-    top: 4%;
+    top: 3%;
+    right: 6%;
+  }
+  @media ${device.mobileS} {
+    right: -30%;
   }
 `;

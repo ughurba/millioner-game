@@ -6,6 +6,10 @@ export const Wrapper = styled.div``;
 
 export const Container = styled.div`
   margin: 0 7%;
+
+  @media ${device.tablet} {
+    margin: 0;
+  }
 `;
 export const StyledHelp = styled.div`
   display: flex;
@@ -23,15 +27,30 @@ export const WrapperHelp = styled.div`
     margin-right: 80px;
   }
 `;
+export const QuestionAndVariant = styled(Flex)`
+  @media ${device.mobileL} {
+    align-items: center;
+  }
+  @media ${device.mobileM} {
+    align-items: flex-end;
+  }
+`;
 export const ImplementFlex = styled(Flex)`
   height: 600px;
+
   @media ${`(min-width: 1024px)`} {
     width: 100%;
   }
   @media ${device.tablet} {
+    width: 100%;
+  }
+  @media ${device.mobileL} {
+    align-items: flex-end !important;
     min-height: 740px;
+    max-width: 370px;
   }
   @media ${device.mobileM} {
     min-height: 700px;
+    max-width: 340px;
   }
 `;

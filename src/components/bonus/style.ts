@@ -23,7 +23,4 @@ export const StyledBonus = styled.div<{ isActive: boolean }>`
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  @media ${device.laptop} {
-    width: 150px;
-  }
 `;

@@ -24,10 +24,15 @@ export const StyledQuestion = styled.div`
   background: ${(props) => props.theme.colors.background};
   height: 80px;
   width: 670px;
-  border-radius: 30px;
+  border-radius: 20px;
+  border: 1px solid #fff;
   margin-bottom: 30px;
+
   @media ${device.tablet} {
-    width: 600px;
+    width: 540px;
+  }
+  @media ${device.laptop} {
+    width: 550px;
   }
   @media ${device.mobileL} {
     width: 300px;

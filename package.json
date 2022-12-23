@@ -2,6 +2,7 @@
   "name": "millioner-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ughurba.github.io/millioner-game/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,6 +12,7 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "gh-pages": "^4.0.0",
     "lodash.clonedeep": "^4.5.0",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
@@ -27,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

@@ -55,8 +55,8 @@ export const WrapperCallAnsewr = styled.div`
   }
 `;
 export const StyledImg = styled.img`
-  width: 120px;
   height: 100%;
+  object-fit: cover;
 `;
 export const Text = styled.p`
   display: flex;
