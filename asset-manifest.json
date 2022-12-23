@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/millioner-game/static/css/main.742cf7aa.css",
+    "main.js": "/millioner-game/static/js/main.ec7e1384.js",
+    "static/media/1001000.mp3": "/millioner-game/static/media/1001000.a7347c569d0cf31cd77e.mp3",
+    "static/media/5000000.mp3": "/millioner-game/static/media/5000000.348c5fdbb08b33bf7866.mp3",
+    "static/media/phone.mp3": "/millioner-game/static/media/phone.6e5d8fd1c34100fa0ed6.mp3",
+    "static/media/logo.png": "/millioner-game/static/media/logo.40e00b44b14618be86e1.png",
+    "static/media/audience.mp3": "/millioner-game/static/media/audience.4448087963b93757142a.mp3",
+    "static/media/answer.mp3": "/millioner-game/static/media/answer.bf051e9fb5173c12f493.mp3",
+    "static/media/background.jpg": "/millioner-game/static/media/background.806b1ce3afa111642372.jpg",
+    "static/media/correct.mp3": "/millioner-game/static/media/correct.160572d72c858155072e.mp3",
+    "static/media/wrong.mp3": "/millioner-game/static/media/wrong.e946821894ae9b0a0d6f.mp3",
+    "static/media/50-50.mp3": "/millioner-game/static/media/50-50.b4389e34aa4a7a3c020c.mp3",
+    "index.html": "/millioner-game/index.html",
+    "main.742cf7aa.css.map": "/millioner-game/static/css/main.742cf7aa.css.map",
+    "main.ec7e1384.js.map": "/millioner-game/static/js/main.ec7e1384.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.742cf7aa.css",
+    "static/js/main.ec7e1384.js"
+  ]
+}
