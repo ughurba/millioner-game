@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "theme/device";
 
 export const WrapperPercent = styled.div`
   display: flex;
@@ -6,6 +7,10 @@ export const WrapperPercent = styled.div`
   position: absolute;
   top: 230px;
   right: -24px;
+
+  @media ${device.mobileL} {
+    right: -55px;
+  }
   display: flex;
   transform: rotate(180deg);
 `;

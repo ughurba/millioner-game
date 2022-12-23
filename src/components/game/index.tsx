@@ -1,59 +1,53 @@
-import { Bonus } from "components/bonus";
-import { Question } from "../question";
-import { Wrapper, Container } from "./style";
-import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { Flex } from "components/flex";
-import { Auditoria } from "components/auditoria";
-import { FiftyFifty } from "components/fiftyFifty";
-import { CallAFriend } from "components/callFriend";
-import { Variants } from "components/variants";
+import {
+  Wrapper,
+  Container,
+  ImplementFlex,
+  WrapperHeader,
+  WrapperHelp,
+} from "./style";
+import {
+  Player,
+  Auditoria,
+  Bonus,
+  CallAFriend,
+  FiftyFifty,
+  Flex,
+  Question,
+  Timer,
+  Variants,
+  BurgerMenu,
+} from "components";
 
-export const Secound = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  color: white;
-  background: blue;
-  border-radius: 50%;
-  margin-left: 30px;
-`;
-export const WrapperHeader = styled.div`
-  margin-top: 30px;
-`;
-export const DecleredFlex = styled(Flex)`
-  height: 600px;
-`;
+import { useState } from "react";
 
 export const Game = () => {
-  const [secound, setSecound] = useState(40);
+  const [open, setOpen] = useState(false);
 
   return (
     <Wrapper>
       <Container>
         <WrapperHeader>
           <Flex JsContent="space-between">
-            <Secound>{secound}</Secound>
-            <DecleredFlex
+            <Timer />
+            <ImplementFlex
               AlItems="center"
               JsContent="space-between"
               FlexColumn="column"
             >
-              <Flex>
+              <WrapperHelp>
                 <FiftyFifty />
                 <CallAFriend />
                 <Auditoria />
-              </Flex>
-              <Flex AlItems="center" JsContent="center" FlexColumn="column">
+              </WrapperHelp>
+              <Flex FlexColumn="column">
                 <Question />
                 <Variants />
               </Flex>
-            </DecleredFlex>
+            </ImplementFlex>
 
             <Bonus />
           </Flex>
+          <BurgerMenu open={open} setOpen={setOpen} />
         </WrapperHeader>
       </Container>
     </Wrapper>

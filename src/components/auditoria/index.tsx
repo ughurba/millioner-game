@@ -5,11 +5,14 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import { Percents } from "./components/percent";
 import { AuditoriaHelpProps } from "./type";
 import { Answer } from "helper/answer";
-import { setAuditoriaHelpAudio } from "store/slices/controlPlayerSlice";
+import { setAuditoriaHelpAudio } from "store/slices/controlHelpSlice";
 
 export const Auditoria = () => {
   const dispatch = useAppDispatch();
   const { answer } = useAppSelector((state) => state.checkAnswer);
+  const { isCallFriendHelp, isFiftyHelp } = useAppSelector(
+    (state) => state.controlHelp
+  );
   const [helpAuditoria, setHelpAuditoria] = useState<AuditoriaHelpProps>({
     isActive: false,
     isAuditoria: false,
@@ -17,11 +20,11 @@ export const Auditoria = () => {
   });
 
   useEffect(() => {
-    if (answer === Answer.correct && helpAuditoria.isActive) {
+    if (answer === Answer.CORRECT && helpAuditoria.isActive) {
       setHelpAuditoria({
         ...{ isActive: false, isAuditoria: true, isOpenAuditoria: false },
       });
-    } else if (answer === Answer.wrong) {
+    } else if (answer === Answer.WRONG) {
       setHelpAuditoria({
         ...{ isActive: false, isAuditoria: false, isOpenAuditoria: false },
       });
@@ -42,7 +45,7 @@ export const Auditoria = () => {
     <Wrapper>
       <StyledAuditoria
         isAuditoria={helpAuditoria.isAuditoria}
-        disabled={helpAuditoria.isAuditoria}
+        disabled={helpAuditoria.isAuditoria || isCallFriendHelp || isFiftyHelp}
         onClick={handleAuditoriaClick}
       >
         <StyledImage src={people} />

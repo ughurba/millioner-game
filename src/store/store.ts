@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import {
   fiftyHelpSlice,
-  controlPlayerSlice,
+  controlHelpSlice,
   countSlice,
   checkAnswerSlice,
 } from "./index";
@@ -10,7 +10,7 @@ export const store = configureStore({
   reducer: {
     count: countSlice,
     fifty: fiftyHelpSlice,
-    player: controlPlayerSlice,
+    controlHelp: controlHelpSlice,
     checkAnswer: checkAnswerSlice,
   },
 });

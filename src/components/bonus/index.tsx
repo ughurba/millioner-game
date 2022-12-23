@@ -1,9 +1,12 @@
 import bonusMoney from "data/bonus.json";
-import { useEffect, useMemo, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import { useAppSelector } from "store/hooks";
 import { StyledBonus, Wrapper, Title } from "./style";
 import cloneDeep from "lodash.clonedeep";
-export const Bonus = () => {
+interface Props {
+  isBurger?: boolean;
+}
+export const Bonus: FC<Props> = ({ isBurger = false }) => {
   const { count } = useAppSelector((state) => state.count);
   const [money, setMoney] = useState<MoneyProps[]>([]);
 
@@ -24,10 +27,10 @@ export const Bonus = () => {
   }, [count]);
 
   return (
-    <Wrapper>
+    <Wrapper isBurger={isBurger}>
       <Title>Bonuslar</Title>
       {money.map((x) => (
-        <StyledBonus isActive={x.isActive} key={x.id}>
+        <StyledBonus isBurger={isBurger} isActive={x.isActive} key={x.id}>
           {x.money}
         </StyledBonus>
       ))}

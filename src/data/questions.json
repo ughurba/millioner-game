@@ -1,19 +1,18 @@
 [
-    {
-        "id":1,
-        "question":"Almanyanın paytaxtı hansı şəhərdir?"
-    },
-    {
-        "id":2,
-        "question":"Aşağıdakı kompüter hissələrindən əməli yaddaş qurğusu deyilən hansıdır?"
-    }, 
-    {
-        "id":3,
-        "question":"Apple şirkətinin qurucusu kimdir?"
-    },
-    {
-        "id":4,
-        "question":"Mayeyə batırılmış cisim onun çıxardığı mayenin çəkisinə bərabər qüvvə ilə mayedən itələnir - bu qanun kimə aiddir?"
-    }
-    
-]
+    "Almanyanın paytaxtı hansı şəhərdir?",
+    "Aşağıdakı kompüter hissələrindən əməli yaddaş qurğusu deyilən hansıdır?",
+    "Apple şirkətinin qurucusu kimdir?",
+    "Mayeyə batırılmış cisim onun çıxardığı mayenin çəkisinə bərabər qüvvə ilə mayedən itələnir - bu qanun kimə aiddir?",
+    "Canlıların təkamül əsasında bir-birindən törədiklərini və insanların meymunlarla eyni nəsildən gəldiyini söyləyən alim kimdir?",
+    "bu sistemlərdən hansı mobil telefon əməliyyat sistemi deyil?",
+    "Bunlardan hansı 7 dünya möcüzəsindən biri sayılmır?",
+    "Botsvana‎ ölkəsi hansı materikdə yerləşir?",
+    "η (eta) bu hərf hansı ölkənin əlifbasınnandır?",
+    "Məişət texnikası istehsalı ilə məşğul olan VİTEK hansı ölkənin brendidir?",
+    "Internet Explorer brauzeri ilk dəfə hansı brauzerə rəqib olaraq yaradılmışdır?",
+    "Hal hazırda dünyanın ən uzun insanı kimdir?",
+    "Azərbaycanın dahi alimi Lütfi A Zadə neçənci ildə bakıya gəlmişdir?"
+   
+  ]
+
+   

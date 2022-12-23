@@ -5,30 +5,30 @@ import { setCheckAnswer } from "store/slices/checkAnswerSlice";
 import colors from "data/colors.json";
 import { Answer } from "helper/answer";
 
+
 export const useCheck = (count: number) => {
-  const [bgColor, setBgColor] = useState<string>(colors.default);
+  const [bgColor, setBgColor] = useState<string>(colors.DEFAULT);
   const dispatch = useAppDispatch();
 
   const correctOption = () => {
-    setBgColor(colors.correct);
+    setBgColor(colors.CORRECT);
 
     setTimeout(() => {
       dispatch(incrmentCount());
-      dispatch(setCheckAnswer(Answer.pending));
+      dispatch(setCheckAnswer(Answer.PENDING));
     }, 1000);
-    dispatch(setCheckAnswer(Answer.correct));
+    dispatch(setCheckAnswer(Answer.CORRECT));
   };
-  
+
   const runClearStates = () => {
-    setBgColor(colors.wrong);
     setTimeout(() => {
-      dispatch(setCheckAnswer(Answer.pending));
+      dispatch(setCheckAnswer(Answer.PENDING));
       dispatch(reset());
-      setBgColor(colors.default);
+      setBgColor(colors.DEFAULT);
     }, 1000);
   };
   useEffect(() => {
-    setBgColor(colors.default);
+    setBgColor(colors.DEFAULT);
   }, [count]);
 
   return {

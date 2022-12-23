@@ -8,8 +8,14 @@ body {
   padding: 0;
   margin: 0;
   background: url("./assets/img/background.jpg") no-repeat;
- background-size: 100%;
+  background-size: cover;
+  background-attachment: fixed;
 
+}
+@media only screen and (max-width: 768px){
+  body {
+   overflow-x: hidden;
+  }
 }
 
 code {

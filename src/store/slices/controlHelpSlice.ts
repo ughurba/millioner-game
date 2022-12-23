@@ -1,15 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Answer } from "helper/answer";
-import { ControlPlayerProps } from "types";
+import { ControlHelpProps } from "types";
 
-interface initialStateProps extends ControlPlayerProps {}
+interface initialStateProps extends ControlHelpProps {}
 const initialState: initialStateProps = {
   isAuditoriaHelp: false,
   isCallFriendHelp: false,
   isFiftyHelp: false,
 };
-const controlPlayerSlice = createSlice({
-  name: "controlPlayer",
+const controlHelpSlice = createSlice({
+  name: "controlHelp",
   initialState: initialState,
   reducers: {
     setAuditoriaHelpAudio: (state, action: PayloadAction<boolean>) => {
@@ -30,5 +29,5 @@ export const {
   setAuditoriaHelpAudio,
   setCallHelpAudio,
   setFiftyHelpAudio,
-} = controlPlayerSlice.actions;
-export default controlPlayerSlice.reducer;
+} = controlHelpSlice.actions;
+export default controlHelpSlice.reducer;

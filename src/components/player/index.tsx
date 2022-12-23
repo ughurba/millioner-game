@@ -6,6 +6,7 @@ import {
   fiftyFifty,
   phoneMusic,
   auditoriaMusic,
+  excitation,
 } from "assets";
 import { Answer } from "helper/answer";
 import { usePlayer } from "hooks/usePlayer";
@@ -15,6 +16,7 @@ import { useAppSelector } from "store/hooks";
 const musics = {
   wrongSong: wrong,
   fonSong: fonMusic,
+  excitationSong: excitation,
   answerSong: answer,
   correctSong: correct,
   fiftySong: fiftyFifty,
@@ -22,24 +24,22 @@ const musics = {
   auditoriaSong: auditoriaMusic,
 };
 export const Player = () => {
-  const { fifty, count, checkAnswer, player } = useAppSelector(
-    (state) => state
-  );
+  const { count, checkAnswer, controlHelp } = useAppSelector((state) => state);
   const { musicSwitch } = usePlayer();
-  const { isAuditoriaHelp, isCallFriendHelp, isFiftyHelp } = player;
+  const { isAuditoriaHelp, isCallFriendHelp, isFiftyHelp } = controlHelp;
 
   const controlAnswerSong = useMemo(() => {
     return new Map([
-      [Answer.checked, () => musicSwitch(musics.answerSong)],
+      [Answer.CHECKED, () => musicSwitch(musics.answerSong)],
       [
-        Answer.correct,
+        Answer.CORRECT,
         () => (
           musicSwitch(musics.correctSong),
           setTimeout(() => musicSwitch(musics.fonSong), 3000)
         ),
       ],
       [
-        Answer.wrong,
+        Answer.WRONG,
         () => {
           musicSwitch(musics.wrongSong);
           setTimeout(() => () => musicSwitch(musics.fonSong), 2000);
@@ -48,6 +48,10 @@ export const Player = () => {
     ]);
   }, []);
 
+  useEffect(() => {
+    musicSwitch(count.count > 6 ? musics.excitationSong : musics.fonSong);
+  }, []);
+  
   useEffect(() => {
     const playingAnswerMusic = controlAnswerSong.get(checkAnswer.answer);
     if (playingAnswerMusic) playingAnswerMusic();

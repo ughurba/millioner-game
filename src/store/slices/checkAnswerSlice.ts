@@ -5,7 +5,7 @@ interface initialStateProps {
   answer: Answer;
 }
 const initialState: initialStateProps = {
-  answer: Answer.pending,
+  answer: Answer.PENDING,
 };
 const checkAnswerSlice = createSlice({
   name: "checkAnswer",

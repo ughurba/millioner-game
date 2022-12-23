@@ -1,7 +1,7 @@
+import { device } from "theme/device";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  color: white;
   position: relative;
 `;
 
@@ -15,6 +15,9 @@ export const Height = styled.div<{ percent: number | undefined }>`
 
 export const StyledImage = styled.img`
   width: 43px;
+  @media ${device.mobileL} {
+    width: 30px;
+  }
 `;
 export const StyledAuditoria = styled.button<{ isAuditoria: boolean }>`
   display: flex;
@@ -28,4 +31,8 @@ export const StyledAuditoria = styled.button<{ isAuditoria: boolean }>`
   height: 52px;
   margin-left: 10px;
   cursor: pointer;
+  @media ${device.mobileL} {
+    width: 50px;
+    height: 40px;
+  }
 `;

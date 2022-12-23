@@ -1,25 +1,21 @@
 [
     [
         {
-            "questionId": 1,
             "title": "Erfurt",
             "isCorrectAnswer": false,
             "variant":"A"
         },
         {
-            "questionId": 1,
             "title": "Bremen",
             "isCorrectAnswer": false,
             "variant":"B"
         }, 
         {
-            "questionId": 1,
             "title": "Berlin",
             "isCorrectAnswer": true,
             "variant":"C"
         },
         {
-            "questionId": 1,
             "title": "Münhen",
             "isCorrectAnswer": false,
             "variant":"D"
@@ -28,28 +24,24 @@
     ],
     [
         {
-            "questionId": 2,
             "title": "RAM",
             "isCorrectAnswer": true,
             "variant":"A"
 
         },
         {
-            "questionId": 2,
             "title": "HDD",
             "isCorrectAnswer": false,
             "variant":"B"
 
         }, 
         {
-            "questionId": 2,
             "title": "SSD",
             "isCorrectAnswer": false,
             "variant":"C"
 
         },
         {
-            "questionId": 2,
             "title": "ROM",
             "isCorrectAnswer": false,
             "variant":"D"
@@ -58,33 +50,292 @@
     ],
     [
         {
-            "questionId": 3,
             "title": "Tim Kuk",
             "isCorrectAnswer": false,
             "variant":"A"
 
         },
         {
-            "questionId": 3,
             "title": "Steve Wozniak",
             "isCorrectAnswer": false,
             "variant":"B"
 
         }, 
         {
-            "questionId": 3,
             "title": "Steve Jobs",
             "isCorrectAnswer": true,
             "variant":"C"
 
         },
         {
-            "questionId": 3,
             "title": "Bill Gates",
             "isCorrectAnswer": false,
             "variant":"D"
 
         }
+    ],
+    [
+        {
+            "title": "İsaak Nyuton",
+            "isCorrectAnswer": false,
+            "variant":"A"
+      
+        },
+        {
+            "title": "Arximed",
+            "isCorrectAnswer": true,
+            "variant":"B"
+      
+        },
+        {
+            "title": "Albert Eynşteyn",
+            "isCorrectAnswer": false,
+            "variant":"C"
+      
+        },
+        {
+            "title": "Xristian Hügens",
+            "isCorrectAnswer": false,
+            "variant":"D"
+      
+        }
+    ],
+    [
+            {
+                "title": "Anton van Levenhuk",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Aleksandr Alfonsoviç",
+                "isCorrectAnswer": false,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Karl Linney",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Çarlz Darvin",
+                "isCorrectAnswer": true,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Android",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Macintosh",
+                "isCorrectAnswer": true,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Windows",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Sybmian",
+                "isCorrectAnswer": false,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Misir piramidalari",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Niaqara şəlaləsi",
+                "isCorrectAnswer": true,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Semiramidanın asma bağları",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Olimpdə Zevsin heykəli",
+                "isCorrectAnswer": false,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Avstraliya",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Avrasiya",
+                "isCorrectAnswer": false,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Cənubi Amerika",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Afrika",
+                "isCorrectAnswer": true,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "İsrail",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Yunanstan",
+                "isCorrectAnswer": true,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Hindistan",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Ermənistan",
+                "isCorrectAnswer": false,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Almanya",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "İsrail",
+                "isCorrectAnswer": false,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Rusya",
+                "isCorrectAnswer": true,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Çin",
+                "isCorrectAnswer": false,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Google Chrome",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Netscape",
+                "isCorrectAnswer": true,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Onion Browser",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+                "title": "Mozilla",
+                "isCorrectAnswer": false,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "Sultan Akif",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "Sultan Ahmet",
+                "isCorrectAnswer": false,
+                "variant":"B"
+      
+            },
+            {
+                "title": "Sultan Selim",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+      
+                "title": "Sultan Kösen",
+                "isCorrectAnswer": true,
+                "variant":"D"
+      
+            }
+    ],
+    [
+            {
+                "title": "2000",
+                "isCorrectAnswer": false,
+                "variant":"A"
+      
+            },
+            {
+                "title": "2003",
+                "isCorrectAnswer": false,
+                "variant":"B"
+      
+            },
+            {
+                "title": "2011",
+                "isCorrectAnswer": false,
+                "variant":"C"
+      
+            },
+            {
+      
+                "title": "2008",
+                "isCorrectAnswer": true,
+                "variant":"D"
+      
+            }
     ]
-   
+      
+  
 ]

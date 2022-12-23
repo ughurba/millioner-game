@@ -1,11 +1,10 @@
+import { device } from "theme/device";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 800px;
+  @media ${device.tablet} {
+    width: 400px;
+  }
 `;
 export const StyledVariant = styled.span`
   margin-right: 10px;
@@ -21,30 +20,44 @@ export const List = styled.li<{
   display: flex;
   align-items: center;
   justify-content: center;
+  list-style: none;
   visibility: ${(props) => (props.isFifty ? "" : "hidden")};
-  color: ${(props) => props.theme.colors.white};
   cursor: pointer;
   pointer-events: ${(props) => (props.disabled ? "none" : "")};
-  position: absolute;
-  top: 2px;
-  left: 3px;
-  right: 3px;
-  bottom: -20px;
   background: ${(props) =>
     props.index === props.isCheckIndex
       ? props.bgColor
       : props.theme.colors.background};
-  height: 90px;
-  box-sizing: border-box;
-  clip-path: ${(props) => props.theme.clipPath};
-  padding: 8px;
-`;
-export const WrapperList = styled.ul<{ isFifty?: boolean }>`
   width: 300px;
-  height: 95px;
-  position: relative;
-  visibility: ${(props) => (props.isFifty ? "" : "hidden")};
-  background-color: ${(props) => props.theme.colors.lightGray};
-  clip-path: ${(props) => props.theme.clipPath};
-  margin-left: 30px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 20px;
+
+  &:hover {
+    background: radial-gradient(
+      at center center,
+      rgb(234, 163, 56) 2%,
+      rgb(196, 137, 0) 100%
+    );
+  }
+  @media ${device.tablet} {
+    width: 270px;
+    height: 60px;
+  }
+`;
+
+export const WrapperList = styled.ul<{ isFifty?: boolean }>`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 640px;
+
+  @media ${device.tablet} {
+    width: 580px;
+  }
+  @media ${device.mobileL} {
+    max-width: 280px;
+  }
 `;

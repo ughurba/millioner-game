@@ -1,6 +1,6 @@
 export enum Answer {
-  wrong = 0,
-  correct = 1,
-  pending = 2,
-  checked = 3,
+  WRONG = 0,
+  CORRECT = 1,
+  PENDING = 2,
+  CHECKED = 3,
 }

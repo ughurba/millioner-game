@@ -13,11 +13,14 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import variants from "data/variants.json";
 import { Answer } from "helper/answer";
 import { CallFriendProps } from "./types";
-import { setCallHelpAudio } from "store/slices/controlPlayerSlice";
+import { setCallHelpAudio } from "store/slices/controlHelpSlice";
 
 export const CallAFriend = () => {
   const { count } = useAppSelector((state) => state.count);
   const { answer } = useAppSelector((state) => state.checkAnswer);
+  const { isAuditoriaHelp, isFiftyHelp } = useAppSelector(
+    (state) => state.controlHelp
+  );
   const dispatch = useAppDispatch();
   const [helpCallFriend, setHelpCallFriend] = useState<CallFriendProps>({
     calling: false,
@@ -30,7 +33,7 @@ export const CallAFriend = () => {
   );
 
   useEffect(() => {
-    if (answer === Answer.correct) {
+    if (answer === Answer.CORRECT) {
       if (helpCallFriend.isOpenTextFriend) {
         setHelpCallFriend({
           ...{
@@ -40,7 +43,7 @@ export const CallAFriend = () => {
           },
         });
       }
-    } else if (answer === Answer.wrong) {
+    } else if (answer === Answer.WRONG) {
       setHelpCallFriend({
         ...{ calling: false, isHelpCallFriend: false, isOpenTextFriend: false },
       });
@@ -67,7 +70,7 @@ export const CallAFriend = () => {
     <Wrapper>
       <StyledCall
         isCallHelpFriend={isHelpCallFriend}
-        disabled={isHelpCallFriend}
+        disabled={isHelpCallFriend || isAuditoriaHelp || isFiftyHelp}
         onClick={handleCallAFriend}
       >
         <PhoneImg src={phone} />
@@ -80,7 +83,7 @@ export const CallAFriend = () => {
             <>
               <StyledImg src={firends[randomIndex]?.imgUrl} />
               <Text>
-                {firends[randomIndex].text}{" "}
+                {firends[randomIndex].text}
                 {
                   variants[count].find((v) => (v.isCorrectAnswer ? v : ""))
                     ?.variant

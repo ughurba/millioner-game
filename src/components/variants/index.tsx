@@ -10,36 +10,29 @@ export const Variants = () => {
   const dispatch = useAppDispatch();
   const [checked, setChecked] = useState<number>();
   const { fifty, count, checkAnswer } = useAppSelector((state) => state);
-  const { correctOption, runClearStates, setBgColor, bgColor } = useCheck(
-    count.count
-  );
+  const { correctOption, setBgColor, bgColor } = useCheck(count.count);
 
   const handleVariantClick = (index: number, isCorrectAnswer: boolean) => {
-    dispatch(setCheckAnswer(Answer.checked));
+    dispatch(setCheckAnswer(Answer.CHECKED));
     setChecked(index);
-    setBgColor(colors.pending);
+    setBgColor(colors.PENDING);
     setTimeout(() => {
       if (isCorrectAnswer) {
         correctOption();
       } else {
-        dispatch(setCheckAnswer(Answer.wrong));
-        runClearStates();
+        setBgColor(colors.WRONG);
+        setTimeout(() => dispatch(setCheckAnswer(Answer.WRONG)), 1000);
       }
     }, 3000);
   };
+
   return (
     <Wrapper>
-      {variants[count.count]?.map((variant, index) => (
-        <WrapperList
-          isFifty={
-            fifty.fiftyHelp.length !== 0
-              ? fifty.fiftyHelp?.includes(index)
-              : true
-          }
-          key={index}
-        >
+      <WrapperList>
+        {variants[count.count]?.map((variant, index) => (
           <List
-            disabled={checkAnswer.answer === Answer.checked ? true : false}
+            key={variant.variant}
+            disabled={checkAnswer.answer === Answer.CHECKED ? true : false}
             bgColor={bgColor}
             index={index}
             isCheckIndex={checked as number}
@@ -53,8 +46,8 @@ export const Variants = () => {
             <StyledVariant>{variant.variant}:</StyledVariant>
             {variant.title}
           </List>
-        </WrapperList>
-      ))}
+        ))}
+      </WrapperList>
     </Wrapper>
   );
 };

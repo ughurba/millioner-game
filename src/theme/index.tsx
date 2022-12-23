@@ -8,13 +8,13 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   margin: 0 ;
   padding: 0;
- 
+  color: white;
+
 }
 `;
 
 const theme = {
   colors: {
-    white: "white",
     lightGray: "#e2e2e2",
     background: "radial-gradient(ellipse at center, #2226a3 7%,#060a6d 100%)",
     red: "radial-gradient(at center center, rgb(255, 50, 54) 2%, rgb(142, 0, 0) 100%);",

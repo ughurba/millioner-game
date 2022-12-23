@@ -7,10 +7,13 @@ import { fiftyHelpVariantActive, reset } from "store/slices/fiftyHelpsSlice";
 import { useEffect, useMemo, useState } from "react";
 import { Answer } from "helper/answer";
 import { FiftyHelpProps } from "./types";
-import { setFiftyHelpAudio } from "store/slices/controlPlayerSlice";
+import { setFiftyHelpAudio } from "store/slices/controlHelpSlice";
 export const FiftyFifty = () => {
   const dispatch = useAppDispatch();
   const { count } = useAppSelector((state) => state.count);
+  const { isAuditoriaHelp, isCallFriendHelp } = useAppSelector(
+    (state) => state.controlHelp
+  );
   const { answer } = useAppSelector((state) => state.checkAnswer);
   const [fiftyHelp, setFiftyHelp] = useState<FiftyHelpProps>({
     isActive: false,
@@ -23,12 +26,12 @@ export const FiftyFifty = () => {
   }, []);
 
   useEffect(() => {
-    if (answer === Answer.correct) {
+    if (answer === Answer.CORRECT) {
       if (filteredVariants.length !== 0 && fiftyHelp.isActive) {
         dispatch(reset());
         setFiftyHelp({ ...{ isActive: false, isFiftyHelp: true } });
       }
-    } else if (answer === Answer.wrong) {
+    } else if (answer === Answer.WRONG) {
       dispatch(reset());
       setFiftyHelp({ ...{ isActive: false, isFiftyHelp: false } });
     }
@@ -55,7 +58,7 @@ export const FiftyFifty = () => {
   return (
     <StyledFifty
       isFiftyHelp={fiftyHelp.isFiftyHelp}
-      disabled={fiftyHelp.isFiftyHelp}
+      disabled={fiftyHelp.isFiftyHelp || isAuditoriaHelp || isCallFriendHelp}
       onClick={handleFiftyHelp}
     >
       <StyledImage src={fifty} />
