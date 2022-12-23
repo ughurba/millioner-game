@@ -30,7 +30,7 @@ export const Bonus: FC<Props> = ({ isBurger = false }) => {
     <Wrapper isBurger={isBurger}>
       <Title>Bonuslar</Title>
       {money.map((x) => (
-        <StyledBonus isBurger={isBurger} isActive={x.isActive} key={x.id}>
+        <StyledBonus isActive={x.isActive} key={x.id}>
           {x.money}
         </StyledBonus>
       ))}

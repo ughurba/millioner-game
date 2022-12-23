@@ -6,7 +6,6 @@ import {
   WrapperHelp,
 } from "./style";
 import {
-  Player,
   Auditoria,
   Bonus,
   CallAFriend,

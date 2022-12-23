@@ -12,13 +12,13 @@ export const Wrapper = styled.div<{ isBurger: boolean }>`
   }
 `;
 
-export const StyledBonus = styled.div<{ isActive: boolean; isBurger: boolean }>`
+export const StyledBonus = styled.div<{ isActive: boolean }>`
   background: ${(props) =>
     !props.isActive ? props.theme.colors.background : "red"};
   border: 2px solid ${(props) => props.theme.colors.lightRight};
   border-radius: 8px;
-  width: ${(props) => (props.isBurger ? "170px" : "240px")};
-  height: ${(props) => (props.isBurger ? "45px" : "50px")};
+  width: 240px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -4,7 +4,6 @@ import { useAppSelector } from "store/hooks";
 import { Wrapper, StyledButton, StyledImage, Text, WrapperText } from "./style";
 import { StartedProps } from "./types";
 import bonuses from "data/bonus.json";
-import { useCheck } from "hooks/useCheck";
 interface Props {
   started: StartedProps;
   setStarted: (started: StartedProps) => void;
