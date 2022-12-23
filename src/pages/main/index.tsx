@@ -37,7 +37,7 @@ export const Main = () => {
       ) : (
         <Game />
       )}
-      {/* {started.startGame && <Player />} */}
+      {started.startGame && <Player />}
     </>
   );
 };
