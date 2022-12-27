@@ -14,5 +14,6 @@ export const store = configureStore({
     checkAnswer: checkAnswerSlice,
   },
 });
+
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

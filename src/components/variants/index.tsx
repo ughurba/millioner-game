@@ -31,6 +31,7 @@ export const Variants = () => {
       <WrapperList>
         {variants[count.count]?.map((variant, index) => (
           <List
+            data-testid="variants"
             key={variant.variant}
             disabled={checkAnswer.answer === Answer.CHECKED ? true : false}
             bgColor={bgColor}

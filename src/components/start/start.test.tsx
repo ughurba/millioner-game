@@ -22,7 +22,7 @@ describe("Start Component", () => {
   it("Should render Start component properly", async () => {
     renderComponent();
     expect(screen.getByText("Millyonçu oynuna xoş gəlmisiniz👋")).toBeInTheDocument();
-    
+
     const startGameBtn = await screen.findByRole("button", { name: "Başla" });
     expect(startGameBtn).toBeInTheDocument();
   });

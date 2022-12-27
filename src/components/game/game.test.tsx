@@ -1,18 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { store } from "store/store";
-import Theme from "theme";
+
 import { Game } from "./index";
+import { renderComponent } from "helper/renderComponent";
 
 describe("Game Component", () => {
   it("Should render Game component properly", async () => {
-    render(
-      <Provider store={store}>
-        <Theme>
-          <Game />
-        </Theme>
-      </Provider>
-    );
+    render(renderComponent(<Game />));
     expect(screen.getByTestId("timer-element")).toBeInTheDocument();
     expect(screen.getByTestId("fifty-element")).toBeInTheDocument();
     expect(screen.getByTestId("call-element")).toBeInTheDocument();

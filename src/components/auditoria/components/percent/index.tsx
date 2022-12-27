@@ -12,24 +12,19 @@ import { useIncPercent } from "hooks/useIncPercent";
 import { useEffect } from "react";
 import { useAppSelector } from "store/hooks";
 import varinats from "data/variants.json";
-
+import { getFilteredValues } from "../../utils";
 export const Percents = () => {
   const { count } = useAppSelector((state) => state.count);
   const { auditoriaObj } = useGenerateRandomInteger();
   const { percents, runIncrementPercent } = useIncPercent({
     ...(auditoriaObj as AuditoriaProps),
   });
-  let filteredValues: number[] = [];
-  let maxValue: number = 0;
+
   useEffect(() => {
     runIncrementPercent();
   }, []);
 
-  const values = Object.values(percents);
-  maxValue = Math.max(...values);
-  filteredValues = [...values];
-  const index = values.indexOf(maxValue);
-  filteredValues.splice(index, 1);
+  const { filteredValues, maxValue } = getFilteredValues(percents);
 
   return (
     <Flex JsContent="space-between">
