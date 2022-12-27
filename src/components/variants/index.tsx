@@ -27,7 +27,7 @@ export const Variants = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="variants-element">
       <WrapperList>
         {variants[count.count]?.map((variant, index) => (
           <List

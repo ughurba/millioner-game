@@ -69,6 +69,7 @@ export const CallAFriend = () => {
   return (
     <Wrapper>
       <StyledCall
+        data-testid="call-element"
         isCallHelpFriend={isHelpCallFriend}
         disabled={isHelpCallFriend || isAuditoriaHelp || isFiftyHelp}
         onClick={handleCallAFriend}

@@ -14,7 +14,7 @@ export const Question = () => {
   }, [count]);
 
   return (
-    <Wrapper>
+    <Wrapper data-testid="question-element">
       <StyledQuestion>
         <Text>{question}</Text>
       </StyledQuestion>

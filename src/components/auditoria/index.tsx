@@ -44,6 +44,7 @@ export const Auditoria = () => {
   return (
     <Wrapper>
       <StyledAuditoria
+        data-testid="auditoria-element"
         isAuditoria={helpAuditoria.isAuditoria}
         disabled={helpAuditoria.isAuditoria || isCallFriendHelp || isFiftyHelp}
         onClick={handleAuditoriaClick}

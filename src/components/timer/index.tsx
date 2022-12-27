@@ -31,7 +31,7 @@ export const Timer = () => {
 
   return (
     <>
-      <Second>{second}</Second>
+      <Second data-testid="timer-element">{second}</Second>
     </>
   );
 };

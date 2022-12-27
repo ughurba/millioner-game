@@ -57,6 +57,7 @@ export const FiftyFifty = () => {
 
   return (
     <StyledFifty
+      data-testid="fifty-element"
       isFiftyHelp={fiftyHelp.isFiftyHelp}
       disabled={fiftyHelp.isFiftyHelp || isAuditoriaHelp || isCallFriendHelp}
       onClick={handleFiftyHelp}
